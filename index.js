@@ -6,7 +6,7 @@ let arbol = new ArbolBinario()
 
 console.log(arbol)
 
-document.getElementById("form1").onsubmit = e => {
+document.getElementById("formNodo").onsubmit = e => {
     e.preventDefault()
 
     let nodo = new Nodo(document.getElementById('valor').valueAsNumber)
@@ -19,8 +19,35 @@ document.getElementById("form1").onsubmit = e => {
     document.getElementById('valor').value = null
 }
 
-document.getElementById("form2").onsubmit = e => {
+document.getElementById("formInOrder").onsubmit = e => {
     e.preventDefault() 
 
-    document.getElementById("resultado").innerHTML = arbol.inOrder(arbol.raiz)
+    document.getElementById("inOrder").innerHTML = arbol.inOrder(arbol.raiz)
+}
+
+document.getElementById("formPreOrder").onsubmit = e => {
+    e.preventDefault()
+
+    document.getElementById("preOrder").innerHTML = arbol.preOrder(arbol.raiz)
+}
+
+document.getElementById("formPostOrder").onsubmit = e => {
+    e.preventDefault()
+
+    document.getElementById("postOrder").innerHTML = arbol.postOrder(arbol.raiz)
+}
+
+document.getElementById("formBuscar").onsubmit = e => {
+    e.preventDefault()
+
+    let dato = document.getElementById("nodo").valueAsNumber
+
+    let encontrado = arbol.buscar(dato, arbol.raiz)
+
+    if(encontrado == true){
+        document.getElementById("buscar").innerHTML = "Encontrado"
+    }
+    else{
+        document.getElementById("buscar").innerHTML = "NO encontrado"
+    }
 }

@@ -8,17 +8,17 @@
     <link rel="stylesheet" href="./index.css">
     <script src="./ArbolBinario.js" type="JavaScript"></script>
     <script src="./Nodo.js" type="JavaScript"></script>
-    <title>JavaScript 1</title>
+    <title>Árboles</title>
 </head>
 
 <body id="body">
     <header>
-        <h1>Formularios</h1>
+        <h1>Árboles</h1>
     </header>
     <section>
         <article>
             <h2>Agregar Nodo</h2>
-            <form id="form1" method="POST">
+            <form id="formNodo" method="POST">
                 <input id="valor" type="number" required placeholder="Valor UwU"><br>
                 <input type="submit"><br>
             </form>
@@ -26,9 +26,31 @@
         <hr>
         <article>
             <h2>InOrder</h2>
-            <form id="form2" method="POST">
+            <form id="formInOrder" method="POST">
                 <input type="submit"><br>
-                <div class="resultado" id="resultado"></div>
+                <div class="resultado" id="inOrder"></div>
+            </form>
+        </article>
+        <article>
+            <h2>Post Order</h2>
+            <form id="formPostOrder" method="POST">
+                <input type="submit"><br>
+                <div class="resultado" id="postOrder"></div>
+            </form>
+        </article>
+        <article>
+            <h2>Pre Order</h2>
+            <form id="formPreOrder" method="POST">
+                <input type="submit"><br>
+                <div class="resultado" id="preOrder"></div>
+            </form>
+        </article>
+        <article>
+            <h2>Buscar Nodo</h2>
+            <form id="formBuscar" method="POST">
+                <input id="nodo" type="number" required placeholder="Nodo UwU"><br>
+                <input type="submit"><br>
+                <div id="buscar"></div>
             </form>
         </article>
     </section>
